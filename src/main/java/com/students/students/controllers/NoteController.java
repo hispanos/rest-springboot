@@ -17,12 +17,12 @@ public class NoteController {
     }
 
     @GetMapping("/student/{studentId}")
-    public List<Note> getNotesByStudentId(@RequestParam int studentId) {
+    public List<Note> getNotesByStudentId(@PathVariable int studentId) {
         return noteService.getNotesByStudentId(studentId);
     }
 
     @GetMapping("/{id}")
-    public Note getNoteById(@RequestParam int id) {
+    public Note getNoteById(@PathVariable int id) {
         return noteService.getNoteById(id);
     }
 
